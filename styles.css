@@ -249,6 +249,10 @@ form h1 {
   font-size: 28px;
 }
 
+form p{
+  margin-top: 10px;
+}
+
 form input,
 form textarea {
   width: 100%;

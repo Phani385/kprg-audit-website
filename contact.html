@@ -32,23 +32,34 @@
       <li><a href="./query.html">Have a Query? </a></li>
     </ul>
     <div class="form-container">
-      <form>
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
         <h1>Contact Us</h1>
-        <div>
-          <input type="text" placeholder="Full Name *" />
-        </div>
-        <div>
-          <input type="text" placeholder="Email *" />
-        </div>
-        <div>
-          <input type="text" placeholder="Phone *" />
-        </div>
-        <div>
-          <input type="text" placeholder="Subject *" />
-        </div>
-        <div>
-          <textarea placeholder="message *" rows="8" cols="10"></textarea>
-        </div>
+        <input
+          type="hidden"
+          name="access_key"
+          value="85f838ab-5a72-416a-b5ee-c8ff54c4835e"
+        />
+        <input type="text" name="sender name" placeholder="Full Name *" />
+
+        <input type="text" name="email" placeholder="Email *" />
+
+        <input type="text" name="phone number" placeholder="Phone *" />
+
+        <input type="text" name="subject" placeholder="Subject *" />
+
+        <textarea
+          placeholder="message *"
+          name="message"
+          rows="8"
+          cols="10"
+        ></textarea>
+
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://web3forms.com/success"
+        />
+
         <p>
           By submiting this form you are consenting that, PRGK & Associates will
           store and use these data for further communication(s).
@@ -66,6 +77,12 @@
         Shadipur Metro Station, Pillar No. 232)
       </p>
     </footer>
+    <script>
+      window.onload = function () {
+        // Reset the form fields when the page loads
+        document.getElementById("contactForm").reset();
+      };
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>

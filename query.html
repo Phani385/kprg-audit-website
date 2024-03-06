@@ -32,26 +32,57 @@
       <li class="selected"><a href="./query.html">Have a Query? </a></li>
     </ul>
     <div class="form-container">
-      <form>
+      <form
+        id="queryForm"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
         <h1>Send a Query</h1>
-        <div>
-          <input type="text" placeholder="Full Name *" />
-        </div>
-        <div>
-          <input type="text" placeholder="Email *" />
-        </div>
-        <div>
-          <input type="text" placeholder="Phone *" />
-        </div>
-        <div>
-          <input type="text" placeholder="Subject *" />
-        </div>
-        <div>
-          <textarea placeholder="Query *" rows="8" cols="10"></textarea>
-        </div>
-        <div>
-          <input type="text" placeholder="Expected Turnaround Time *" />
-        </div>
+
+        <input
+          type="hidden"
+          name="access_key"
+          value="85f838ab-5a72-416a-b5ee-c8ff54c4835e"
+        />
+
+        <input
+          type="text"
+          name="sender name"
+          required
+          placeholder="Full Name *"
+        />
+
+        <input type="text" name="email" required placeholder="Email *" />
+
+        <input
+          type="text"
+          name="mobile number"
+          required
+          placeholder="Phone *"
+        />
+
+        <input type="text" name="subject" required placeholder="Subject *" />
+
+        <textarea
+          placeholder="Query *"
+          name="Query"
+          rows="8"
+          cols="10"
+          required
+        ></textarea>
+
+        <input
+          type="text"
+          name="Turnaround Time"
+          placeholder="Expected Turnaround Time *"
+          required
+        />
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://web3forms.com/success"
+        />
+
         <p>
           By submiting this form you are consenting that, PRGK & Associates will
           store and use these data for further communication(s).
@@ -69,6 +100,12 @@
         Shadipur Metro Station, Pillar No. 232)
       </p>
     </footer>
+    <script>
+      window.onload = function () {
+        // Reset the form fields when the page loads
+        document.getElementById("queryForm").reset();
+      };
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>
