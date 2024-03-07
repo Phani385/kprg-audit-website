@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav>
-      <a href="/">
+      <a href="./index.html">
         <h2>PRKG & Associates</h2>
       </a>
       <i class="fa-solid fa-bars nav-bars" id="mobileNavBtn"></i>
@@ -45,43 +45,48 @@
           value="85f838ab-5a72-416a-b5ee-c8ff54c4835e"
         />
 
-        <input
-          type="text"
-          name="sender name"
-          required
-          placeholder="Full Name *"
-        />
+        <div class="input-container">
+          <input type="text" id="senderName" name="sender name" required />
+          <label for="senderName" class="input-label">Full Name *</label>
+        </div>
 
-        <input type="text" name="email" required placeholder="Email *" />
+        <div class="input-container">
+          <input type="text" name="email" id="email" required />
+          <label for="email" class="input-label">Email *</label>
+        </div>
 
-        <input
-          type="text"
-          name="mobile number"
-          required
-          placeholder="Phone *"
-        />
+        <div class="input-container">
+          <input type="text" name="phone number" id="phoneNumber" required />
+          <label for="phoneNumber" class="input-label">Phone *</label>
+        </div>
 
-        <input type="text" name="subject" required placeholder="Subject *" />
+        <div class="input-container">
+          <input type="text" name="subject" id="subject" required />
+          <label for="subject" class="input-label">Subject *</label>
+        </div>
 
-        <textarea
-          placeholder="Query *"
-          name="Query"
-          rows="8"
-          cols="10"
-          required
-        ></textarea>
+        <div class="input-container textarea-container">
+          <textarea
+            name="message"
+            id="message"
+            placeholder=" "
+            rows="8"
+            cols="10"
+          ></textarea>
+          <label for="message" class="input-label">Message *</label>
+        </div>
 
-        <input
-          type="text"
-          name="Turnaround Time"
-          placeholder="Expected Turnaround Time *"
-          required
-        />
-        <input
-          type="hidden"
-          name="redirect"
-          value="https://web3forms.com/success"
-        />
+        <div class="input-container">
+          <input
+            type="text"
+            name="Turnaround time"
+            id="expectedTurnaroundTime"
+            required
+          />
+          <label for="expectedTurnaroundTime" class="input-label"
+            >Expected Turnaround Time *</label
+          >
+        </div>
 
         <p>
           By submiting this form you are consenting that, PRGK & Associates will
